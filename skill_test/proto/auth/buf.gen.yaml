@@ -1,0 +1,38 @@
+version: v2
+plugins:
+  - remote: buf.build/protocolbuffers/go
+    out: ../service/gRPC/auth/internal/pbgen
+    opt: 
+      - Mauth/v1/auth.proto=.;pbgen
+      - Mgoogle/api/annotations.proto=.;pbgen
+      - Mgoogle/api/http.proto=.;pbgen
+    include_imports: true
+    include_wkt: false
+  - remote: buf.build/grpc/go
+    out: ../service/gRPC/auth/internal/pbgen
+    opt: 
+      - Mauth/v1/auth.proto=.;pbgen
+      - Mgoogle/api/annotations.proto=.;pbgen
+      - Mgoogle/api/http.proto=.;pbgen
+    include_imports: true
+    include_wkt: false
+  - local: protoc-gen-grpc-gateway
+    out: ../service/gRPC/auth/internal/pbgen
+    opt: 
+      - Mauth/v1/auth.proto=.;pbgen
+      - Mgoogle/api/annotations.proto=.;pbgen
+      - Mgoogle/api/http.proto=.;pbgen
+    include_imports: true
+    include_wkt: false
+  # - remote: buf.build/protocolbuffers/go
+  #   out: ../service/rest/gateway/internal/pbgen
+  #   opt:  
+  #     - Mauth/v1/auth.proto=.;pbgen
+  #   include_imports: true
+  #   include_wkt: false
+  # - remote: buf.build/grpc/go
+  #   out: ../service/rest/gateway/internal/pbgen
+  #   opt: 
+  #     - Mauth/v1/auth.proto=.;pbgen
+  #   include_imports: true
+  #   include_wkt: false
