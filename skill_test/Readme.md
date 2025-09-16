@@ -17,15 +17,14 @@ API yang dibuat meliputi:
 - **Golang** - Bahasa pemrograman backend
 - **Database** - Point Test C
 - **JWT** - Authentication
-- **Gin / Echo / net/http** (sesuaikan framework jika digunakan)
+- **gRPC** 
 - **Postman / curl** - Untuk testing API
 
 ---
 
-## Setup Project
+## How To Run Project
 
-1. Clone repository:
+1. cd ./skill_test/service/gRPC && podman compose up -d --build
+2. Kemudian Tinggal Akses Enpoint endpointnya
 
-```bash
-git clone <repository_url>
-cd <project_folder>
+

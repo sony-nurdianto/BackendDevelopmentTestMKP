@@ -43,7 +43,7 @@ func main() {
 
 	pbgen.RegisterAuthServiceServer(svr, svc)
 
-	listener, err := net.Listen("tcp", ":50051")
+	listener, err := net.Listen("tcp", "0.0.0.0:50051")
 	if err != nil {
 		log.Fatalln(err)
 	}

@@ -24,14 +24,14 @@ func main() {
 	err := pbgen.RegisterAuthServiceHandlerFromEndpoint(
 		ctx,
 		mux,
-		"localhost:50051",
+		"grpc-auth-service:50051",
 		opts,
 	)
 	if err != nil {
 		log.Fatalln(err)
 	}
 
-	if err := http.ListenAndServe(":3000", mux); err != nil {
+	if err := http.ListenAndServe("0.0.0.0:3000", mux); err != nil {
 		log.Fatalln(err)
 	}
 }

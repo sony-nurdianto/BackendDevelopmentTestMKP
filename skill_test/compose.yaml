@@ -24,6 +24,37 @@ services:
     ports:
       - 8080:8080
 
+
+  grpc-auth-service:
+    build:
+      context: .
+      dockerfile: ./scripts/dockerfile/auth_grpc_service.dockerfile
+    env_file:
+      - ./service/gRPC/auth/.env
+    ports:
+      - 50001:50001
+    depends_on:
+      postgres:
+        condition: service_healthy
+
+
+  auth-gateway-service:
+    build:
+      context: .
+      dockerfile: ./scripts/dockerfile/auth_gateway_service.dockerfile
+    env_file:
+      - ./service/gRPC/auth/.env
+    ports:
+      - 3000:3000
+    depends_on:
+      - grpc-auth-service
+    healthcheck:
+      test: ["CMD", "nc", "-z", "rest-farm-gateway", "3000"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+
 volumes:
   test_postgres:
 
