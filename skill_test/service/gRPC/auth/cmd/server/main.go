@@ -11,6 +11,7 @@ import (
 	"syscall"
 
 	"github.com/joho/godotenv"
+	"github.com/sony-nurdianto/BackendDevelopmentTest/skill_test/service/gRPC/auth/internal/interceptor"
 	"github.com/sony-nurdianto/BackendDevelopmentTest/skill_test/service/gRPC/auth/internal/pbgen"
 	"github.com/sony-nurdianto/BackendDevelopmentTest/skill_test/service/gRPC/auth/internal/repo"
 	"github.com/sony-nurdianto/BackendDevelopmentTest/skill_test/service/gRPC/auth/internal/service"
@@ -36,7 +37,9 @@ func main() {
 	authUsecase := usecase.NewAuthUsecase(authRepo)
 
 	svc := service.NewAuthServiceServer(authUsecase)
-	svr := grpc.NewServer()
+	svr := grpc.NewServer(
+		grpc.UnaryInterceptor(interceptor.AuthServiceUnaryInterceptor),
+	)
 
 	pbgen.RegisterAuthServiceServer(svr, svc)
 
