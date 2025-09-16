@@ -15,6 +15,9 @@ sistem pada point test System Design Test. sesuai dengan Intruksi instruksi.
 ----------
 
 ## 1. Microservice Database Mapping
+
+
+## 🏗️ Database Architecture Diagram
 ```mermaid
 flowchart TD
     subgraph UserService
@@ -74,11 +77,6 @@ flowchart TD
     T1 -.-> N1
     T1 -.-> A1
     T1 -.-> A2
-```
-
-## 🏗️ Database Architecture Diagram
-```mermaid
-
 ```
 
 ## 📊 Data Flow Diagram
