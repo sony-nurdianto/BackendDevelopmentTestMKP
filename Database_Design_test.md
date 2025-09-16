@@ -1,4 +1,5 @@
 # System Design Test
+
 ## Soal
 
 Database Design Test
@@ -14,6 +15,66 @@ sistem pada point test System Design Test. sesuai dengan Intruksi instruksi.
 ----------
 
 ## 1. Microservice Database Mapping
+```mermaid
+flowchart TD
+    subgraph UserService
+        U1[users]
+        U2[user_status_enum]
+        U1 --- U2
+    end
+
+    subgraph TerminalService
+        T1[terminals]
+        T2[gates]
+        T3[fares]
+        T4[balance_holds]
+        T5[gate_type_enum]
+        T6[gate_status_enum]
+        T7[hold_status_enum]
+
+        T2 --- T5
+        T2 --- T6
+        T4 --- T7
+        T3 --- T1
+        T2 --- T1
+        T4 --- T1
+    end
+
+    subgraph JourneyService
+        J1[journey_history]
+        J2[journey_status_enum]
+        J1 --- J2
+    end
+
+    subgraph NotificationService
+        N1[notifications]
+        N2[notification_type_enum]
+        N3[notification_status_enum]
+        N1 --- N2
+        N1 --- N3
+    end
+
+    subgraph AnalyticsService
+        A1[analytics_events]
+        A2[daily_metrics]
+        A3[event_type_enum]
+        A1 --- A3
+    end
+
+    %% Relationships
+    U1 -.-> T4
+    U1 -.-> J1
+    U1 -.-> N1
+    U1 -.-> A1
+
+    T1 -.-> T2
+    T1 -.-> T3
+    T1 -.-> T4
+    T1 -.-> J1
+    T1 -.-> N1
+    T1 -.-> A1
+    T1 -.-> A2
+```
 
 ## 🏗️ Database Architecture Diagram
 ```mermaid
