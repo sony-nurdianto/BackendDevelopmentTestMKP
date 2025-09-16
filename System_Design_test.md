@@ -34,9 +34,163 @@ jaringan internet
 
 ## 1. Desain Rancangan Sistem
 
-![enter image description here](https://mermaid.ink/img/pako:eNqdWN1u2zYUfhVCQHsVJ41jJ40uCkSS0x_kr42LAUt2QUuMTVgWPVJK6sUFdrGLYb9d24uhwDAUGLBhu-kTbO_SJ9gj7JCULOonmp1cBNLh9x2SRzzfOfS15bOAWLZ1EbIrf4R5jPreeYTgTySDIcfTEXouCD_AM8LRmXxEd5FHLqlPkDJ-ptHyT46e_fvrT7-pJ3RF4xE62neRi3mwccgGNCQGuk_4hEY43APKuz8Xr2gPPcRxHdApAZ2bgG4J6N4E9EpA7yZgrwTsmUASBedRKWaPoyEnQqRheyxiytAp4Spsh0SMKrFTkJQFk333SlsyR2q-KzwzGKk76Q0Ib79ENbOc0oD4mIuGlTqJoFG-1Ow18yMqK-1Tf0xiGg1TBEz-w1-5NSMajH3MSQ5-_UEZanBHLKYX1MewjSjHv_m9MFDDe0RFzPjMoHyb2dATlvCIzGpYe_AhZzH1hcH7JrfWME5nke_hGOeEt18pI5LWEqEu1hKWxlkzYIl4WE2kZySg4uzju_f6CRLIH5kLOWEihmNx-vQA1vDqZ-MdnXA6wbBvzzEX_vSAxkQm2uu_zUTT9grQKQGdm4BuCejeBPRKQO8mYK8E7FWBcLAFBM3hbKzk5s0fmQlpm4F1sD9OpmmYpet_UlMW-oaPdTwAEbvEoFo0nqVfrWADITxkEQVHcOyNSY-nJOqTkExIzGdyge-LJuSyMCQ-8MxPyhkMjkgis__N18a7AXqCyVDt-e336bMxeMDGVHJ_UU_GwEOOL3CE9flOX-AoitGAgTA3RMDlLHrCBgKdncL5C5KQBEi-VwIsgWcff_yQBTclVl3fuaNLQ8zyT7wPlUePqqFW68G8j6eLwjHPC8VSKGcplLsUylsK1TN2t9gV7FDrcb69xT6Ur0f9_gmk9-cJEfG8IP9FtLMS2l0J7a2E7v0vehEGvfUjxuNR65QlcSmbNM7kotY6-DYJfTiooPnzYu5U5ogXFU_UeW09MOukRhgGBSgXNPNzlquaVnoQWUh6UADj45acqFhtrmvpRvuUy2gpNW_At9dBt6E6huEAEmlu6HoDaWsdHV9chFC1QY4CMs_UfnWKszrFXZ3irU4xM0w2QqCgUcxZCAEVUxYJ0uBSHp8NN2SCKGpFTlYjObchubchebchmYHaE7Iz6WMxFuiS4lKRbPB-kgxCCrnRuyRRLObFgqt5-n9hIBVIMUabNtSBEEfg7ngKfKP9a-S1bciyKEC9CabhvK4bbKRv2Ytm74AN56WusJHasfO-b15pDBupXTtt_iDY83KHaHyNRTsNgiURA5ydWiM8WmBZGGy4OPSTUB71NJRVMaiJj-LD5gtjokothkaxnhGf8SCLYJVSDooiySaKmKEzWfnWyx2ylHSu15YqcjFs6YJwkHWz1eXUMZ5PA6UNUnELWlsHVotKtaYkmcvCndXg7mpwbzW4mfmZhMpvekl4Wm7TPeoUhzyTVQ2KbCSwnx6Tyuk1rgS3o7m3o3m3o_VWoS2i1cMibn0C3Uxdj1IVSNmnHEIrIq-Id-UkkNSVJqWS10uzarN6aXY5sZcmVtN7aWrlhC7FzA9r4Up1QqdEnl09XLw2qaMvC0TqfG5ckhrx2RL0lakRCuIJQHmBMgtdPo9qGNM7lB7TTqt26aNoXWw5vSWBV3_RZOcXKb2Y9MKV2qsCaFz5cyXOwIVrr7VmDTkNLDvmCVmzJtAqYPlqXUtP5xbsa0LOLRseA8zH59Z59BI4Uxx9ytgko3GWDEeWfYFDAW-JklqPYrgo5hAIIOEuS6LYsrs728qHZV9bLyy7tXmv21nvdDr325325v2d7po1s-z2-r3O7m63vdPpdrZ2ttvtl2vWF2pSGNltb2_tdLu7O53dre0t8AaCDjs61L9Xqp8tX_4HlnkWfw?type=png)
+```mermaid
+flowchart  TD
+subgraph  UserLayer
+User[User  with  NFC  Card/Mobile]
+TerminalA[Terminal  A  Gate]
+TerminalB[Terminal  B  Gate]
+TerminalC[Terminal  C  Gate]
+TerminalD[Terminal  D  Gate]
+TerminalE[Terminal  E  Gate]
+end
 
-[Diagram Link For Better View](https://mermaid.live/view#pako:eNqdWMtu20YU_ZUBgWZlKZIfsa1FAJOU84AdO7GCArW7GJFjaSCKo86QTtUoQBddFH2mSRZFgKIIUKBFu8kXtP-SL-gn9M6D4vBhVrIXBnnnnDszl3PPvaPnTsBC4vScy4g9C8aYJ2jgX8QI_kQ6HHE8G6OngvAjPCccnctHdAv55IoGBCnjpxot_-To-b-__vSbekLPaDJGjw495GEe3j5mQxoRCz0gfEpjHB0A5e2fy1d0gO7hpA7oloDudUCvBPSuA_oloH8dsF8C9m0gicOLuBSzB_GIEyFM2B6IhDJ0RrgK2zER40rsFMSwYLLvXmpL5kjN9wzPLYZxJ70B4c2XqGaWMxqSAHPRsFI3FTTOl5q9Zn5EZaUDGkxIQuORQcDkP_yVWzOixTjEnOTgV--VoQb3iCX0kgYYthHn-Ne_FwZqePepSBifW5RvMxt6yFIek3kN6wA-5DyhgbB43-TWGsbZPA58nOCc8OYrZUTSWiLUxVrCTJw1A5aIR9VEekJCKs4_vH2nnyCBgrG9kFMmEjgWZ4-PYA0vf7be0SmnUwz79l174Y-PaEJkor362040ba8A3RLQvQ7olYDedUC_BPSvA_ZLwH4VCAdbQNBcziZKbl7_kZmQtllYFweTdGbCLF3_Y0xZ6Bs-1skQROwKg2rRZG6-WsEGQnjMYgqO4Nhbk57MSDwgEZmShM_lAt8VTchjUUQC4NmflDMYHJNUZv_rr613C_QQk5Ha85vvzbM1eMQmVHJ_UU_WwD2OL3GM9fk2L3AUxXjIQJgbIuBxFj9kQ4HOz-D8hWlEQiTfKwGWwPMPP77PgmuIVdcffaRLQ8LyT3wIlUePqqFW6-5igGfLwrHIC8VKKHcllLcSyl8J1bd2t9wV7FDrcb695T6Ur_uDwSmk92cpEcmiIP9FtLsW2lsL7a-F7v8vehkGvfVHjCfj1hlLk1I2aZzNRa02-LYJAziooPmLYu5U5kiWFU_UeW3dteukRlgGBSgXNPtzlquaVnoQWUh6UADr45acqFh121q60SHlMlpKzRvwm23QbaiOUTSERFpYut5A2mqjk8vLCKo2yFFIFpnar09x16d461P89Sl2hslGCBQ0TjiLIKBixmJBGlzK43Pbi5ggilqRk_VI7k1I3k1I_k1IdqAOhOxMBlhMBLqiuFQkG7yfpsOIQm70r0iciEWx4Gqe_l8YMAIpJqjbgzoQ4RjcncyAb7V_jbzNHmRZHKL-FNNoUdcNNtK3estm74iNFqWusJG63cv7vkWlMWyk7vRM8wfBXpQ7ROtrLNtpECyJGOLs1Frh0QLLovC2h6MgjeRRN6GsikFNfBQfNl8YE1VqMTSK9YQEjIdZBKuUclAUSTZRxA6dzcq3Xu6QpaRzvTajyMWwmQXhMOtmq8upYzydhUobpOIWtLYOrBZltKYkmavC3fXg3npwfz24nfmZhMpvekW4KbdmjzrFIc9kVYMiGwscmGNSOb3WleBmNO9mNP9mtP46tGW0-lgkrY-hm6nrUaoCKfuUY2hF5BXxlpwEkrrSpFTyemVWbVavzC4n9srEanqvTK2c0JWY-WEtXKlO6YzIs6uHi9cmdfRlgTDOF9YlqRGfLUFfmRqhIJ4AlBcou9Dl86iG0dyh9Jh2WrVLH0XrcsvmlgReg2WTnV-k9GLMhcvYqwJoXflzJc7AhWuvs-GMOA2dXsJTsuFMoVXA8tV5Lj1dOLCvKblwevAYYj65cC7iF8CZ4fgTxqYZjbN0NHZ6lzgS8JYqqfUphotiDoEAEu6xNE6c3t7WpvLh9J47nzu9VrfbbXc6nW7nzl63u7O5tb294cwBttfe3N3d7ezv3-nsb-3uvNhwvlCzdtvbd7b3N3c6nb2d_T0Y2nBA0GFHx_r3SvWz5Yv_AI5qFm8)
+  
+
+subgraph  IstioLayer
+IstioIngress[Istio  Ingress  Gateway]
+ServiceMesh[Istio  Service  Mesh  Sidecars]
+end
+
+  
+
+subgraph  ServiceLayer
+TicketingService[Ticketing  Service]
+FareService[Fare  Service]
+NotificationService[Notification  Service]
+HistoryService[Journey  History  Service]
+AnalyticsService[Analytics  Service]
+SyncDataService[Sync  Data  Service]
+end
+
+  
+
+subgraph  DataLayer
+Redis[Redis  Cache]
+PostgreSQL[PostgreSQL  Primary  DB]
+SQLiteA[Terminal  A  SQLite]
+SQLiteB[Terminal  B  SQLite]
+SQLiteC[Terminal  C  SQLite]
+SQLiteD[Terminal  D  SQLite]
+SQLiteE[Terminal  E  SQLite]
+MessageBroker[Message  Broker]
+BackupStorage[Backup  Storage]
+end
+
+  
+
+subgraph  Observability
+OpenTelemetry[OpenTelemetry  Collector]
+Prometheus[Prometheus]
+Jaeger[Jaeger]
+Loki[Loki]
+Grafana[Grafana  Dashboard]
+end
+
+  
+
+subgraph  CronJobs
+BackupCron[Backup  CronJob]
+end
+
+  
+
+User  --> TerminalA
+User  --> TerminalB
+User  --> TerminalC
+User  --> TerminalD
+User  --> TerminalE
+
+  
+
+TerminalA  --> IstioIngress
+TerminalB  --> IstioIngress
+TerminalC  --> IstioIngress
+TerminalD  --> IstioIngress
+TerminalE  --> IstioIngress
+
+  
+
+IstioIngress  --> ServiceMesh
+ServiceMesh  --> TicketingService
+
+  
+
+TicketingService  --> Redis
+TicketingService  --> PostgreSQL
+TicketingService  --> SQLiteA
+TicketingService  --> SQLiteB
+TicketingService  --> SQLiteC
+TicketingService  --> SQLiteD
+TicketingService  --> SQLiteE
+
+  
+
+TicketingService  --> TerminalA
+TicketingService  --> TerminalB
+TicketingService  --> TerminalC
+TicketingService  --> TerminalD
+TicketingService  --> TerminalE
+
+  
+
+TicketingService  --> MessageBroker
+MessageBroker  --> FareService
+MessageBroker  --> NotificationService
+MessageBroker  --> HistoryService
+MessageBroker  --> AnalyticsService
+MessageBroker  --> SyncDataService
+
+  
+
+FareService  --> PostgreSQL
+NotificationService  --> PostgreSQL
+HistoryService  --> PostgreSQL
+AnalyticsService  --> PostgreSQL
+
+  
+
+SyncDataService  --> PostgreSQL
+SyncDataService  --> Redis
+SyncDataService  --> SQLiteA
+SyncDataService  --> SQLiteB
+SyncDataService  --> SQLiteC
+SyncDataService  --> SQLiteD
+SyncDataService  --> SQLiteE
+
+  
+
+SQLiteA  --> SyncDataService
+SQLiteB  --> SyncDataService
+SQLiteC  --> SyncDataService
+SQLiteD  --> SyncDataService
+SQLiteE  --> SyncDataService
+
+  
+
+TicketingService  -.-> OpenTelemetry
+FareService  -.-> OpenTelemetry
+NotificationService  -.-> OpenTelemetry
+HistoryService  -.-> OpenTelemetry
+AnalyticsService  -.-> OpenTelemetry
+SyncDataService  -.-> OpenTelemetry
+IstioIngress  -.-> OpenTelemetry
+
+  
+
+OpenTelemetry  --> Prometheus
+OpenTelemetry  --> Jaeger
+OpenTelemetry  --> Loki
+Prometheus  --> Grafana
+Jaeger  --> Grafana
+Loki  --> Grafana
+
+  
+
+BackupCron  --> PostgreSQL
+PostgreSQL  --> BackupStorage
+
+```
 
 # E-Ticketing System Flow Description
 
